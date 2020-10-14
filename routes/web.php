@@ -28,3 +28,5 @@ Route::get('/admin', function() {
 Route::get('/kepsek', function() {
     return "Anda adalah Kepala Sekolah";
 });
+
+Route::get('/pengunjung', [App\Http\Controllers\pengunjungcontroller::class, 'index'])->name('pengunjung');
