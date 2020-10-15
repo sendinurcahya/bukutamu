@@ -15,12 +15,11 @@ class CreatePengunjungTable extends Migration
     {
         Schema::create('pengunjung', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
+            $table->string('nama');
             $table->string('kontak');
             $table->string('asal');
             $table->string('tujuan');
-            $table->string('deskripsi');
-            $table->string('foto');
+            $table->text('deskripsi');
         });
     }
 
