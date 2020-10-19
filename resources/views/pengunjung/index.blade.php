@@ -47,34 +47,35 @@
                         </button>
                         </div>
                             <div class="modal-body">
-                            <form>
+                            <form action="/pengunjung/create" method="post">
+                            {{csrf_field()}}    
                             <div class="form-group">
                             <label for="exampleInputEmail1">namas</label>
-                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="nama">
+                            <input name="nama" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="nama">
                             </div>
                             <div class="form-group">
                             <label for="exampleInputEmail1">kontak</label>
-                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="kontak">
+                            <input name="kontak" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="kontak">
                             </div>
                             <div class="form-group">
                             <label for="exampleInputEmail1">asal</label>
-                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="asal">
+                            <input name="asal" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="asal">
                             </div>
                             <div class="form-group">
                             <label for="exampleFormControlSelect1">tujuan</label>
-                            <select class="form-control" id="exampleFormControlSelect1">
-                                <option>kepsek</option>
-                                <option>tu</option>
-                                <option>kesiswan</option>
-                                <option>kurikulum</option>
-                                <option>humas</option>
-                                <option>kajur</option>
-                                <option>wali kelas</option>
+                            <select name="tujuan" class="form-control" id="exampleFormControlSelect1">
+                                <option value="kepsek">kepsek</option>
+                                <option value="tu">tu</option>
+                                <option value="kesiswan">kesiswan</option>
+                                <option value="kurikulum">kurikulum</option>
+                                <option value="humas">humas</option>
+                                <option value="kajur">kajur</option>
+                                <option value="wali kelas">wali kelas</option>
                             </select>
                           </div>
                             <div class="form-group">
                             <label for="exampleFormControlTextarea1">deskripsi</label>
-                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                            <textarea name="deskripsi" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
                         </div>
 
                                 <button type="daftar" class="btn btn-primary">daftar</button>

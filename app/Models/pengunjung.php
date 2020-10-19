@@ -8,4 +8,5 @@ use Illuminate\Database\Eloquent\Model;
 class pengunjung extends Model
 {
     protected $table = 'pengunjung';
+    protected $fillable = ['nama','kontak','asal','tujuan','deskripsi'];
 }

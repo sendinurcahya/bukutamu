@@ -20,6 +20,7 @@ class CreatePengunjungTable extends Migration
             $table->string('asal');
             $table->string('tujuan');
             $table->text('deskripsi');
+            $table->timestamp();
         });
     }
 

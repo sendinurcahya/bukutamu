@@ -30,3 +30,4 @@ Route::get('/kepsek', function() {
 });
 
 Route::get('/pengunjung', [App\Http\Controllers\pengunjungcontroller::class, 'index'])->name('pengunjung');
+Route::post('/pengunjung/create', [App\Http\Controllers\pengunjungcontroller::class, 'create'])->name('pengunjung');
