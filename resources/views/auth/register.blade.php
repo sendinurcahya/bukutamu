@@ -27,14 +27,14 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="email"
-                                class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
+                            <label for="username"
+                                class="col-md-4 col-form-label text-md-right">{{ __('Username') }}</label>
 
                             <div class="col-md-6">
-                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror"
-                                    name="email" value="{{ old('email') }}" required autocomplete="email">
+                                <input id="username" type="username" class="form-control @error('username') is-invalid @enderror"
+                                    name="username" value="{{ old('username') }}" required autocomplete="username">
 
-                                @error('email')
+                                @error('username')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
                                 </span>
@@ -75,6 +75,7 @@
 
                             <div class="col-md-6">
                                 <select name="level" class="form-control">
+                                <option value="admin">Admin</option>
                                     <option value="kepsek">Kepala Sekolah</option>
                                     <option value="tu">TU</option>
                                     <option value="kesiswaan">Kesiswaaan</option>

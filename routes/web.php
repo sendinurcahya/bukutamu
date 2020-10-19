@@ -22,11 +22,11 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::get('/admin', function() {
-    return "Anda adalah admin";
+    return view('admin.dashboard');
 });
 
 Route::get('/kepsek', function() {
-    return "Anda adalah Kepala Sekolah";
+    return view('kepsek.dashboard');
 });
 
 Route::get('/pengunjung', [App\Http\Controllers\pengunjungcontroller::class, 'index'])->name('pengunjung');

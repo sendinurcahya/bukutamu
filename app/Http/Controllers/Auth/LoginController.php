@@ -43,11 +43,11 @@ class LoginController extends Controller
         $input = $request->all();
 
         $this->validate($request, [
-            'email' => 'required',
+            'username' => 'required',
             'password' => 'required',
         ]);
 
-        if(Auth()->attempt(array('email' => $input['email'], 'password' => $input['password']))) {
+        if(Auth()->attempt(array('username' => $input['username'], 'password' => $input['password']))) {
             if(Auth()->user()->level == 'admin') {
                 return redirect('/admin');
             } else if(Auth()->user()->level == 'kepsek') {
@@ -56,7 +56,7 @@ class LoginController extends Controller
                 return redirect('/login');
             }
         } else {
-            return redirect()->route('login')->with('error', 'email atau Password salah!');
+            return redirect()->route('login')->with('error', 'username atau Password salah!');
         }
     }
 }
