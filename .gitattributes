@@ -2,3 +2,12 @@
 *.css binary
 *.scss binary
 *.js binary
+*.otf binary
+*.eot binary
+*.svg binary
+*.ttf binary
+*.woff binary
+*.ofl binary
+*.less binary
+*.txt binary
+*.html binary

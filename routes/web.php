@@ -19,7 +19,7 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');\
 
 Route::get('/admin', function() {
     return view('admin.dashboard');
@@ -27,6 +27,10 @@ Route::get('/admin', function() {
 
 Route::get('/kepsek', function() {
     return view('kepsek.dashboard');
+});
+
+Route::get('/tu', function() {
+    return view('tu.dashboard');
 });
 
 Route::get('/pengunjung', [App\Http\Controllers\pengunjungcontroller::class, 'index'])->name('pengunjung');

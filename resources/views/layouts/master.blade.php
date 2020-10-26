@@ -79,13 +79,13 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="../../index.html" class="nav-link">
+                <a href="/kepsek" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Kepala Sekolah</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="../../index2.html" class="nav-link">
+                <a href="/tu" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Tata Usaha</p>
                 </a>
