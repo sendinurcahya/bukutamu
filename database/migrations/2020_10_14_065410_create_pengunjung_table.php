@@ -18,7 +18,7 @@ class CreatePengunjungTable extends Migration
             $table->string('nama');
             $table->string('kontak');
             $table->string('asal');
-            $table->string('tujuan');
+            $table->enum('tujuan', ['admin', 'kepsek', 'tu', 'kesiswaan', 'kurikulum', 'humas', 'kajur', 'wali_kelas']);
             $table->text('deskripsi');
             $table->timestamps();
         });

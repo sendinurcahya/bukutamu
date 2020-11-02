@@ -11,3 +11,5 @@
 *.less binary
 *.txt binary
 *.html binary
+*.lock binary
+*.php binary

@@ -1,4 +1,16 @@
-<!DOCTYPE html>
+@extends('layouts.master')
+
+@section('content')
+<section class="content">
+
+<div class="card">
+  <div class="card-header">
+    <h3 class="card-title">Dashboard</h3>
+  </div>
+  <div class="card-body">
+    Selamat Datang Admin
+  </div>
+  <!DOCTYPE html>
 <html>
 <head>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
@@ -19,18 +31,18 @@
                 <table class="table table-hover">
                     <tr>
                         <th>NAMA</th>
-                        <th>KONTAK\</th>
+                        <th>KONTAK</th>
                         <th>ASAL</th>
                         <th>TUJUAN</th>
                         <th>DESKRIPSI</th>
                     </tr>
                     @foreach($data_pengunjung as $pengunjung)
                     <tr>
-                        <th>{{ $pengunjung->nama }}</th>
-                        <th>{{ $pengunjung->kontak }}</th>
-                        <th>{{ $pengunjung->asal }}</th>
-                        <th>{{ $pengunjung->tujuan }}</th>
-                        <th>{{ $pengunjung->deskripsi }}</th>
+                        <td>{{ $pengunjung->nama }}</td>
+                        <td>{{ $pengunjung->kontak }}</td>
+                        <td>{{ $pengunjung->asal }}</td>
+                        <td>{{ $pengunjung->tujuan }}</td>
+                        <td>{{ $pengunjung->deskripsi }}</td>
                     </tr>
                     @endforeach
                 </table>
@@ -43,14 +55,14 @@
                         <div class="modal-header">
                             <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
+                            <span aria-hidden="true"></span>
                         </button>
                         </div>
                             <div class="modal-body">
                             <form action="/pengunjung/create" method="post">
                             {{csrf_field()}}    
                             <div class="form-group">
-                            <label for="exampleInputEmail1">namas</label>
+                            <label for="exampleInputEmail1">nama</label>
                             <input name="nama" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="nama">
                             </div>
                             <div class="form-group">
@@ -95,3 +107,5 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
 </body>
 </html>
+</div>
+@endsection
