@@ -15,6 +15,12 @@ class pengunjungcontroller extends Controller
     public function create(Request $request)
     {
     	\App\Models\pengunjung::create($request->all());
-    	return redirect('/pengunjung');
+    	return redirect('/pengunjung')->with('sukses', 'data berhasil di input');
+    }
+
+    public function edit($id)
+    {
+        $pengunjung = \App\Models\pengunjung::fimd($id);
+        dd($pengunjung);
     }
 }

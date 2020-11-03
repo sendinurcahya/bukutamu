@@ -17,7 +17,12 @@
     <title></title>
 </head>
 <body>
-    <div class="container">
+        <div class="container">
+        @if(session('sukses'))
+                <div class="alert alert-success" role="alert">
+                {{session('sukses')}}
+                </div>
+        @endif
         <div class="row">
             <div class="col-6">
                 <h1>DATA PENGUNJUNG</h1>   
@@ -35,6 +40,7 @@
                         <th>ASAL</th>
                         <th>TUJUAN</th>
                         <th>DESKRIPSI</th>
+                        <th>AKSI</th>
                     </tr>
                     @foreach($data_pengunjung as $pengunjung)
                     <tr>
@@ -43,6 +49,7 @@
                         <td>{{ $pengunjung->asal }}</td>
                         <td>{{ $pengunjung->tujuan }}</td>
                         <td>{{ $pengunjung->deskripsi }}</td>
+                        <td><a href="/pengunjung/{{$pengunjung->id}}/edit" class="btn btn-warning btm-sm">edit</a></td>
                     </tr>
                     @endforeach
                 </table>
@@ -78,7 +85,7 @@
                             <select name="tujuan" class="form-control" id="exampleFormControlSelect1">
                                 <option value="kepsek">kepsek</option>
                                 <option value="tu">tu</option>
-                                <option value="kesiswan">kesiswan</option>
+                                <option value="kesiswaan">kesiswaan</option>
                                 <option value="kurikulum">kurikulum</option>
                                 <option value="humas">humas</option>
                                 <option value="kajur">kajur</option>

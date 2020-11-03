@@ -33,5 +33,7 @@ Route::get('/tu', function() {
     return view('tu.dashboard');
 });
 
+//pengunjung
 Route::get('/pengunjung', [App\Http\Controllers\pengunjungcontroller::class, 'index'])->name('pengunjung');
 Route::post('/pengunjung/create', [App\Http\Controllers\pengunjungcontroller::class, 'create'])->name('pengunjung');
+Route::get('/pengunjung/(id)/edit', [App\Http\Controllers\pengunjungcontroller::class, 'edit'])->name('pengunjung');
